@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Address &middot; Reverse engineering Chrome Autofill</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <h1>Chrome Autofill: addresses</h1>
+    </header>
+
+    <section>
+      <h1>The required elements</h1>
+
+      <form>
+        <input placeholder="address">
+        <input name="unit">
+        <input name="zip">
+      </form>
+    </section>
+
+    <section>
+      <h1>Interchangeable name and placeholder in case of unit and zip code</h1>
+
+      <form>
+        <input placeholder="address">
+        <input placeholder="unit">
+        <input name="zip">
+      </form>
+      <form>
+        <input placeholder="address">
+        <input name="unit">
+        <input placeholder="zip">
+      </form>
+      <form>
+        <input placeholder="address">
+        <input placeholder="unit">
+        <input placeholder="zip">
+      </form>
+    </section>
+
+    <section>
+      <h1>Multiple attributes</h1>
+
+      <form>
+        <input name="foo" placeholder="address">
+        <input name="unit" placeholder="apartment">
+        <input name="zip" placeholder="code">
+      </form>
+      <form>
+        <input name="foo" placeholder="address">
+        <input name="bar" placeholder="unit">
+        <input name="baz" placeholder="zip">
+      </form>
+    </section>
+
+    <section>
+      <h1>Inaccurate values</h1>
+
+      <form>
+        <input placeholder="addressfoo">
+        <input name="unitbar">
+        <input name="zipbaz">
+      </form>
+      <form>
+        <input placeholder="fooaddress">
+        <input name="barunit">
+        <input name="bazzip">
+      </form>
+      <form>
+        <input placeholder="fooaddressfoo">
+        <input name="barunitbar">
+        <input name="bazzipbaz">
+      </form>
+    </section>
+
+    <section>
+      <h1>Case insensitivity</h1>
+
+      <form>
+        <input placeholder="Address">
+        <input name="UnIt">
+        <input name="ZIP">
+      </form>
+    </section>
+  </body>
+</html>
