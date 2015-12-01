@@ -149,5 +149,33 @@
         </form>
       </div>
     </section>
+
+    <section>
+      <h1>Autocomplete attribute</h1>
+
+      <div>
+        <h2>These will work</h2>
+        <form autocomplete="off">
+          <input placeholder="address">
+          <input name="unit">
+          <input name="zip">
+        </form>
+        <form>
+          <input placeholder="address" autocomplete="off">
+          <input name="unit">
+          <input name="zip">
+        </form>
+        <form>
+          <input placeholder="address" autocomplete="off">
+          <input name="unit" autocomplete="off">
+          <input name="zip" autocomplete="off">
+        </form>
+        <form autocomplete="off">
+          <input placeholder="address" autocomplete="off">
+          <input name="unit" autocomplete="off">
+          <input name="zip" autocomplete="off">
+        </form>
+      </div>
+    </section>
   </body>
 </html>
