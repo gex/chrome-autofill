@@ -11,7 +11,9 @@
     </header>
 
     <section>
-      <h1>The required elements</h1>
+      <h1 id="elements">
+        The required elements
+      </h1>
 
       <div>
         <h2>This will work</h2>
@@ -50,7 +52,9 @@
     </section>
 
     <section>
-      <h1>Interchangeable name and placeholder in case of unit and zip code</h1>
+      <h1 id="name-or-placeholder">
+        Interchangeable name and placeholder in case of unit and zip code
+      </h1>
 
       <div>
         <h2>These will work</h2>
@@ -97,7 +101,9 @@
     </section>
 
     <section>
-      <h1>Multiple attributes</h1>
+      <h1 id="attributes">
+        Multiple attributes
+      </h1>
 
       <div>
         <h2>These will work</h2>
@@ -115,7 +121,25 @@
     </section>
 
     <section>
-      <h1>Inaccurate values</h1>
+      <h1 id="labels">Labels</h1>
+
+      <div>
+        <h2>This will work</h2>
+        <form>
+          <label for="foo-1">address</label>
+          <input id="foo-1" name="foo">
+          <label for="bar-1">unit</label>
+          <input id="bar-1" name="bar">
+          <label for="baz-1">zip</label>
+          <input id="baz-1" name="baz">
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <h1 id="values">
+        Inaccurate values
+      </h1>
 
       <div>
         <h2>These will work</h2>
@@ -134,24 +158,60 @@
           <input name="barunitbar">
           <input name="bazzipbaz">
         </form>
-      </div>
-    </section>
-
-    <section>
-      <h1>Case insensitivity</h1>
-
-      <div>
-        <h2>This will work</h2>
         <form>
-          <input placeholder="Address">
-          <input name="UnIt">
-          <input name="ZIP">
+          <label for="foo-2">addressfoo</label>
+          <input id="foo-2" name="foo">
+          <label for="bar-2">unitbar</label>
+          <input id="bar-2" name="bar">
+          <label for="baz-2">zipbaz</label>
+          <input id="baz-2" name="baz">
+        </form>
+        <form>
+          <label for="foo-3">fooaddress</label>
+          <input id="foo-3" name="foo">
+          <label for="bar-3">barunit</label>
+          <input id="bar-3" name="bar">
+          <label for="baz-3">bazzip</label>
+          <input id="baz-3" name="baz">
+        </form>
+        <form>
+          <label for="foo-4">fooaddressfoo</label>
+          <input id="foo-4" name="foo">
+          <label for="bar-4">barunitbar</label>
+          <input id="bar-4" name="bar">
+          <label for="baz-4">bazzipbaz</label>
+          <input id="baz-4" name="baz">
         </form>
       </div>
     </section>
 
     <section>
-      <h1>Autocomplete attribute</h1>
+      <h1 id="case-insensitivity">
+        Case insensitivity
+      </h1>
+
+      <div>
+        <h2>These will work</h2>
+        <form>
+          <input placeholder="Address">
+          <input name="UnIt">
+          <input name="ZIP">
+        </form>
+        <form>
+          <label for="foo-5">Address</label>
+          <input id="foo-5" name="foo">
+          <label for="bar-5">UnIt</label>
+          <input id="bar-5" name="bar">
+          <label for="baz-5">ZIP</label>
+          <input id="baz-5" name="baz">
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <h1 id="autocomplete">
+        Autocomplete attribute
+      </h1>
 
       <div>
         <h2>These will work</h2>
@@ -175,15 +235,49 @@
           <input name="unit" autocomplete="off">
           <input name="zip" autocomplete="off">
         </form>
+        <form autocomplete="off">
+          <label for="foo-6">address</label>
+          <input id="foo-6" name="foo">
+          <label for="bar-6">unit</label>
+          <input id="bar-6" name="bar">
+          <label for="baz-6">zip</label>
+          <input id="baz-6" name="baz">
+        </form>
+        <form>
+          <label for="foo-7">address</label>
+          <input id="foo-7" name="foo" autocomplete="off">
+          <label for="bar-7">unit</label>
+          <input id="bar-7" name="bar">
+          <label for="baz-7">zip</label>
+          <input id="baz-7" name="baz">
+        </form>
+        <form>
+          <label for="foo-8">address</label>
+          <input id="foo-8" name="foo" autocomplete="off">
+          <label for="bar-8">unit</label>
+          <input id="bar-8" name="bar" autocomplete="off">
+          <label for="baz-8">zip</label>
+          <input id="baz-8" name="baz" autocomplete="off">
+        </form>
+        <form autocomplete="off">
+          <label for="foo-9">address</label>
+          <input id="foo-9" name="foo" autocomplete="off">
+          <label for="bar-9">unit</label>
+          <input id="bar-9" name="bar" autocomplete="off">
+          <label for="baz-9">zip</label>
+          <input id="baz-9" name="baz" autocomplete="off">
+        </form>
       </div>
     </section>
 
     <section>
-      <h1>Separate by fieldsets</h1>
+      <h1 id="fieldsets">
+        Fieldsets
+      </h1>
 
       <div>
-        <h2>This will work</h2>
-        <form autocomplete="off">
+        <h2>These will work</h2>
+        <form>
           <fieldset>
             <input placeholder="address">
           </fieldset>
@@ -192,6 +286,20 @@
           </fieldset>
           <fieldset>
             <input name="zip">
+          </fieldset>
+        </form>
+        <form>
+          <fieldset>
+            <label for="foo-10">address</label>
+            <input id="foo-10" name="foo">
+          </fieldset>
+          <fieldset>
+            <label for="bar-10">unit</label>
+            <input id="bar-10" name="bar">
+          </fieldset>
+          <fieldset>
+            <label for="baz-10">zip</label>
+            <input id="baz-10" name="baz">
           </fieldset>
         </form>
       </div>
